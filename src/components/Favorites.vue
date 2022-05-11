@@ -1,0 +1,38 @@
+<template>
+  <Popover v-slot="{open}" class="relative">
+    <div class="block">
+      <PopoverButton
+          type="button"
+          class="h-16 leading-normal px-4 py-2 rounded-md text-sm font-medium text-gray-900 focus:outline-none"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor"
+             stroke-width="2">
+          <path stroke-linecap="round" stroke-linejoin="round"
+                d="M11.049 2.927c.3-.921 1.603-.921 1.902 0l1.519 4.674a1 1 0 00.95.69h4.915c.969 0 1.371 1.24.588 1.81l-3.976 2.888a1 1 0 00-.363 1.118l1.518 4.674c.3.922-.755 1.688-1.538 1.118l-3.976-2.888a1 1 0 00-1.176 0l-3.976 2.888c-.783.57-1.838-.197-1.538-1.118l1.518-4.674a1 1 0 00-.363-1.118l-3.976-2.888c-.784-.57-.38-1.81.588-1.81h4.914a1 1 0 00.951-.69l1.519-4.674z"/>
+        </svg>
+      </PopoverButton>
+
+      <transition
+          enter-active-class="transition duration-200 ease-out"
+          enter-from-class="translate-y-1 opacity-0"
+          enter-to-class="translate-y-0 opacity-100"
+          leave-active-class="transition duration-150 ease-in"
+          leave-from-class="translate-y-0 opacity-100"
+          leave-to-class="translate-y-1 opacity-0"
+      >
+        <PopoverPanel
+            class="absolute left-1/2 z-10 mt-3 w-screen max-w-3xl -translate-x-1/2 transform p-4 border rounded">
+          Favorites
+        </PopoverPanel>
+      </transition>
+    </div>
+  </Popover>
+</template>
+
+<script setup>
+import {PopoverButton, Popover, PopoverPanel} from '@headlessui/vue'
+</script>
+
+<style scoped>
+
+</style>

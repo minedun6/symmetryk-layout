@@ -21,10 +21,12 @@
           leave-to-class="translate-y-1 opacity-0"
       >
         <PopoverPanel
-            class="absolute z-10 mt-3 w-screen max-w-sm px-4 sm:px-0 lg:max-w-3xl left-auto right-0">
+            class="absolute z-10 mt-3 w-1/3 max-w-sm px-4 sm:px-0 lg:max-w-3xl left-auto right-0">
           <div class="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
             <div class="relative grid gap-8 bg-white p-7">
-              
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ab amet doloremque exercitationem libero magnam
+              maiores maxime modi mollitia nemo neque praesentium qui quibusdam quisquam, ratione soluta temporibus,
+              totam ullam, voluptates?
             </div>
           </div>
         </PopoverPanel>
@@ -34,7 +36,7 @@
 </template>
 
 <script setup>
-import {dayjs as moment} from 'dayjs'
+import dayjs from 'dayjs'
 import {v4 as uuid} from 'uuid'
 import {PopoverButton, Popover, PopoverPanel} from '@headlessui/vue'
 
@@ -43,7 +45,7 @@ const subFiles = [
     id: uuid(),
     name: 'SubFile #1',
     index: 0,
-    createdAt: moment().format('YYYY-MM-DD hh:mm:ss'),
+    createdAt: dayjs().format('YYYY-MM-DD hh:mm:ss'),
     state: 1,
     pages: [
       {
